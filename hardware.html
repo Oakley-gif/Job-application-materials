@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>硬件设计作品 · 刘树澎</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#333;background:#fff;line-height:1.7;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+header{padding:40px 0 24px;border-bottom:1px solid #ddd;}
+.back{font-size:13.5px;color:#888;text-decoration:none;}
+.back:hover{color:#2f6dbd;}
+header h1{font-size:24px;font-weight:700;margin-top:10px;}
+header .meta{font-size:14px;color:#666;margin-top:4px;}
+a.card{display:flex;gap:20px;align-items:center;padding:18px 20px;margin:16px 0;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px;text-decoration:none;color:inherit;transition:border-color .15s,background .15s;}
+a.card:hover{background:#fff;border-color:#2f6dbd;}
+a.card:hover h3{color:#2f6dbd;}
+.card img{width:180px;height:120px;object-fit:cover;border:1px solid #e5e5e5;border-radius:4px;background:#fff;flex-shrink:0;}
+.card h3{font-size:17px;font-weight:600;}
+.card .desc{font-size:13.5px;color:#666;margin-top:4px;}
+.card .more{display:block;font-size:12.5px;color:#999;margin-top:6px;}
+a.card:hover .more{color:#2f6dbd;}
+footer{color:#999;font-size:12.5px;padding:40px 0;text-align:center;}
+@media (max-width:640px){a.card{flex-direction:column;align-items:flex-start;}.card img{width:100%;height:auto;}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <a class="back" href="index.html">← 返回首页</a>
+  <h1>硬件设计作品</h1>
+  <div class="meta">独立完成的原理图与 PCB 设计（立创 EDA）</div>
+</header>
+
+<a class="card" href="hw-f1-fc.html">
+  <img src="images/f1-fc/3d.jpg" alt="STM32F1 飞控主板 3D 渲染图">
+  <div>
+    <h3>STM32F1 飞控主板</h3>
+    <div class="desc">基于 STM32F103 的四轴飞行器主控板 · 双层板</div>
+    <span class="more">点击查看详情</span>
+  </div>
+</a>
+
+<a class="card" href="hw-f405.html">
+  <img src="images/f405/3d.jpg" alt="STM32F405 核心板 3D 渲染图">
+  <div>
+    <h3>STM32F405RGT6 核心板</h3>
+    <div class="desc">基于 STM32F405 的核心控制板 · 双层板</div>
+    <span class="more">点击查看详情</span>
+  </div>
+</a>
+
+<a class="card" href="hw-drv8701.html">
+  <img src="images/drv8701/3d.jpg" alt="DRV8701E 电机驱动板 3D 渲染图">
+  <div>
+    <h3>DRV8701E 直流有刷电机驱动板</h3>
+    <div class="desc">双路有刷电机驱动 · 7.0cm × 3.0cm 双层板</div>
+    <span class="more">点击查看详情</span>
+  </div>
+</a>
+
+<footer>© 2026 刘树澎</footer>
+</div>
+
+</body>
+</html>
