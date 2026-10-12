@@ -3,63 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>刘树澎 · 项目作品集</title>
+<title>刘树澎 · 硬件工程师 | 项目作品集</title>
 <style>
+:root{--ink:#1f3a5f;--accent:#2f6dbd;--gray:#666;--line:#e3e8ef;--bg:#f4f6f9;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#333;background:#fff;line-height:1.7;}
-.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
-header{padding:56px 24px 40px;border-bottom:1px solid #ddd;}
-header h1{font-size:28px;font-weight:700;}
-header .meta{font-size:14px;color:#666;margin-top:8px;}
-h2{font-size:19px;font-weight:700;margin:48px 0 16px;padding-bottom:8px;border-bottom:1px solid #ddd;}
-a.card{display:block;padding:18px 20px;margin-bottom:12px;background:#fafafa;border:1px solid #e5e5e5;border-radius:6px;text-decoration:none;color:inherit;transition:border-color .15s,background .15s;}
-a.card:hover{background:#fff;border-color:#2f6dbd;}
-a.card:hover h3{color:#2f6dbd;}
-.card h3{font-size:17px;font-weight:600;}
-.card h3 .award{font-size:13px;font-weight:400;color:#666;margin-left:8px;}
-.card .time{font-size:13px;color:#888;margin-top:2px;}
-.card .more{display:block;font-size:12.5px;color:#999;margin-top:6px;}
-a.card:hover .more{color:#2f6dbd;}
-footer{color:#999;font-size:12.5px;padding:40px 0;text-align:center;}
-@media (max-width:760px){header h1{font-size:24px;}}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#2b2b2b;background:var(--bg);line-height:1.7;}
+.hero{background:linear-gradient(135deg,#1f3a5f 0%,#2f6dbd 100%);color:#fff;padding:64px 24px 56px;text-align:center;}
+.hero h1{font-size:34px;letter-spacing:2px;}
+.hero .role{font-size:17px;margin-top:10px;opacity:.92;}
+.hero .edu{font-size:14px;margin-top:6px;opacity:.75;}
+.hero .contact{font-size:13.5px;margin-top:10px;opacity:.85;}
+.btn{display:inline-block;margin-top:24px;padding:11px 34px;background:#fff;color:var(--ink);border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:transform .15s;}
+.btn:hover{transform:translateY(-2px);}
+.wrap{max-width:960px;margin:0 auto;padding:48px 24px 64px;}
+.sec{margin-bottom:48px;}
+.sec-title{font-size:22px;color:var(--ink);border-left:5px solid var(--accent);padding-left:12px;margin-bottom:6px;}
+.sec-sub{font-size:13.5px;color:var(--gray);margin-bottom:22px;padding-left:17px;}
+.cards{display:flex;flex-direction:column;gap:20px;}
+a.card,div.card{background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(31,58,95,.08);display:block;padding:24px 28px;text-decoration:none;color:inherit;border:1px solid transparent;transition:transform .15s,box-shadow .15s,border-color .15s;}
+a.card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(31,58,95,.14);border-color:var(--accent);}
+.card .award{display:inline-block;font-size:12.5px;color:#fff;background:var(--accent);border-radius:4px;padding:2px 10px;margin-bottom:10px;}
+.card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+.card .time{font-size:12.5px;color:var(--gray);margin-bottom:10px;}
+.card p{font-size:14px;color:#444;}
+.tags{margin:14px 0 12px;}
+.tags span{display:inline-block;font-size:12px;color:var(--ink);background:#eef3fa;border-radius:4px;padding:2px 9px;margin:0 6px 6px 0;}
+.card .link{font-size:14.5px;font-weight:700;color:var(--accent);}
+a.glink{display:inline-block;font-size:13.5px;font-weight:700;color:var(--accent);margin-top:10px;text-decoration:none;}
+a.glink:hover{text-decoration:underline;}
+.imgs{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 4px;}
+.imgs img{flex:1 1 0;min-width:0;max-height:230px;object-fit:contain;background:#fafbfd;border:1px solid var(--line);border-radius:8px;padding:4px;}
+.imgs img.tall{max-height:280px;}
+.cap{width:100%;font-size:12px;color:var(--gray);text-align:center;margin-top:2px;}
+.awards{background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(31,58,95,.08);padding:24px 28px;}
+.awards ul{margin-left:20px;columns:2;column-gap:36px;}
+.awards li{margin:6px 0;font-size:14.5px;break-inside:avoid;}
+@media (max-width:760px){.hero h1{font-size:26px;}.awards ul{columns:1;}}
+footer{text-align:center;color:var(--gray);font-size:12.5px;padding:28px 0 40px;}
 </style>
 </head>
 <body>
 
-<div class="wrap">
-<header>
+<section class="hero">
   <h1>刘树澎</h1>
-  <div class="meta">求职意向：硬件/电子工程师　｜　东北大学（985）· 智能制造工程 · 本科 2027 届</div>
-</header>
+  <div class="role">求职意向：硬件工程师</div>
+  <div class="edu">东北大学（985）· 智能制造工程 · 本科 2027 届</div>
+  <div class="contact">15107688990　｜　3206997958@qq.com</div>
+  <a class="btn" href="#sec1">查看项目作品</a>
+</section>
 
-<h2 id="projects">项目作品</h2>
+<div class="wrap">
 
-<a class="card" href="chive-machine.html">
-  <h3>“韭韭归一”——基于仿生视觉的智能韭菜处理机<span class="award">全国大学生机械创新设计大赛 · 全国二等奖</span></h3>
-  <div class="time">2026.03 – 2026.06　｜　团队项目 · 硬件与电控负责人</div>
-  <span class="more">点击查看详情</span>
-</a>
+  <!-- ============ 01 竞赛项目 ============ -->
+  <section class="sec" id="sec1">
+    <h2 class="sec-title">01　竞赛项目</h2>
+    <div class="sec-sub">智能汽车竞赛 · 完全模型组　｜　机械创新设计大赛　｜　两轮平衡循迹小车</div>
+    <div class="cards">
 
-<a class="card" href="smartcar-vision.html">
-  <h3>智能车完全模型组<span class="award">全国大学生智能汽车竞赛 · 全国二等奖</span></h3>
-  <div class="time">2025.01 – 2025.07　｜　5 人团队 · 硬件负责人</div>
-  <span class="more">点击查看详情</span>
-</a>
+      <a class="card" href="chive-machine.html">
+        <span class="award">全国二等奖 · 全国大学生机械创新设计大赛</span>
+        <h3>“韭韭归一”——基于仿生视觉的智能韭菜处理机</h3>
+        <div class="time">2025.07 – 2026.04　｜　硬件与电控负责人</div>
+        <p>面向大型商超生鲜加工区的韭菜采后处理一体机，在单一平台实现“振动给料—气动去土—视觉除黄叶—电控捆扎—定量码垛”五位一体全流程自动化。以 ESP32-S3 双核为主控搭建“决策—桥梁—感知—执行”四层电控架构，FreeRTOS 多任务调度，经 I2C 扩展 PCA9685 输出 16 路 PWM，单板协同驱动直流 / 步进 / 伺服电机、舵机、电缸、电磁阀 6 类执行器；OpenMV 视觉引导仿生夹爪剔除黄叶，MQTT 接入云平台实现网页远程控制。</p>
+        <div class="tags">
+          <span>ESP32-S3</span><span>FreeRTOS</span><span>PCA9685</span><span>OpenMV 视觉</span><span>MQTT</span><span>运动控制</span><span>电源管理</span><span>机电一体化</span>
+        </div>
+        <span class="link">阅读完整技术报告 →</span>
+      </a>
 
-<a class="card" href="balance-car.html">
-  <h3>基于电磁感应的两轮平衡循迹小车<span class="award">全国大学生智能汽车竞赛 · 电磁组</span></h3>
-  <div class="time">2024.09 – 2024.11　｜　3 人团队 · 核心成员</div>
-  <span class="more">点击查看详情</span>
-</a>
+      <a class="card" href="smartcar-vision.html">
+        <span class="award">全国二等奖 · 全国大学生智能汽车竞赛 · 完全模型组</span>
+        <h3>智能车完全模型组</h3>
+        <div class="time">2025.01 – 2025.07　｜　5 人团队 · 队内唯一硬件队员</div>
+        <p>“智慧生活”主题无人驾驶竞速：EdgeBoard + TC264 双处理器架构，独立完成 3 块自制电路板（TC264 主板、DRV8701E 驱动与 USB 通信板、照明灯板）与整车机械结构设计。12V 电池输入经 TPS5430 降压得到 5V / 6.8V / 3.3V 三路电源，Buck + LDO 组合抑制模块间串扰，EdgeBoard 供电链路串入 ACM7060F 共模滤波器抑制 EMI；设计单路 USB 转双路 TTL 串口方案提升通信可靠性；融合神经网络目标检测与传统视觉循迹完成全任务场景。</p>
+        <div class="tags">
+          <span>TC264</span><span>DRV8701E</span><span>TPS5430</span><span>电源管理</span><span>EMI 抑制</span><span>OpenCV</span><span>目标检测</span><span>3D 打印</span>
+        </div>
+        <span class="link">阅读完整技术报告 →</span>
+      </a>
 
-<a class="card" href="hardware.html">
-  <h3>硬件设计作品</h3>
-  <div class="time">STM32F1 飞控主板 / STM32F405 核心板 / DRV8701E 驱动板 / 智能车人工智能组主板　｜　原理图与 PCB 设计</div>
-  <span class="more">点击查看详情</span>
-</a>
+      <a class="card" href="balance-car.html">
+        <span class="award">全国大学生智能汽车竞赛 · 电磁组</span>
+        <h3>基于电磁感应的两轮平衡循迹小车</h3>
+        <div class="time">2024.09 – 2024.11　｜　3 人团队 · 核心成员</div>
+        <p>基于 STC32G12K128 的两轮自平衡循迹车：独立完成 DRV8701E 直流电机驱动板的原理图、PCB、打板、焊接与测试全流程；主导电磁感应信号链路设计（运放放大 + 12 位 ADC 采集 + 中值滤波）；互补滤波姿态解算 + “平衡—速度—转向”串级 PID，五电感差比和差加权循迹算法，经 100+ 次实测调参实现标准赛道 10 圈连续稳定循迹，正式比赛全程无故障完赛。</p>
+        <div class="tags">
+          <span>STC32</span><span>DRV8701E</span><span>串级 PID</span><span>互补滤波</span><span>电磁循迹</span><span>ADC 信号链</span>
+        </div>
+        <span class="link">阅读完整技术报告 →</span>
+      </a>
 
-<footer>© 2026 刘树澎</footer>
+    </div>
+  </section>
+
+  <!-- ============ 02 电路设计作品 ============ -->
+  <section class="sec" id="sec2">
+    <h2 class="sec-title">02　电路设计作品</h2>
+    <div class="sec-sub">TPS5430 Buck 电源　｜　DRV8701E 电机驱动板　｜　灰度传感器　｜　航模低压预警电路</div>
+    <div class="cards">
+
+      <div class="card">
+        <h3>基于 TPS5430 的 Buck 直流电源降压模块</h3>
+        <div class="time">独立设计　｜　原理图 · PCB · 焊接 · 示波器实测</div>
+        <p>输入级采用 PMOS 防反接保护，以 TPS5430 为核心配合功率电感、续流肖特基二极管与输出电容构成完整 Buck 降压拓扑。使用示波器实测输出纹波与负载动态响应，观察开关节点振铃并定位干扰来源；通过开关节点增加 RC 吸收电路、反馈补偿网络引入前馈电容、缩小开关电流环路面积并保持地平面完整等措施，降低辐射与传导干扰，提升电源输出质量。</p>
+        <div class="imgs">
+          <img src="images/p13_1.jpg" alt="TPS5430 Buck 原理图">
+          <img src="images/p13_2.jpg" alt="Buck 电源模块">
+        </div>
+        <div class="tags"><span>TPS5430</span><span>Buck 拓扑</span><span>PMOS 防反接</span><span>RC 吸收</span><span>纹波实测</span></div>
+      </div>
+
+      <div class="card">
+        <h3>基于 DRV8701E 的直流有刷电机驱动板</h3>
+        <div class="time">独立设计　｜　已实际用于两个竞赛项目</div>
+        <p>电源输入采用 PMOS 防反接；针对控制信号易受功率级干扰的问题，在信号输入端增加缓冲器进行隔离整形，防止功率级开关噪声回灌主控。以 DRV8701E 栅极驱动芯片配合外部 MOS 管搭建 H 桥（桥臂选用 TPH1R403），驱动能力可按电机需求灵活选配 MOS；MOS 管对称排布、功率回路短而宽，功率地与信号地分开走线。完成器件选型、原理图、PCB、打板、焊接与上电测试全流程，长时运行稳定无故障。</p>
+        <div class="imgs">
+          <img src="images/p14_2.jpg" alt="DRV8701E 驱动板 3D 图">
+          <img src="images/p15_1.jpg" alt="DRV8701E 驱动板实物">
+        </div>
+        <div class="tags"><span>DRV8701E</span><span>H 桥</span><span>TPH1R403</span><span>信号隔离</span><span>功率布局</span></div>
+        <a class="glink" href="hw-drv8701.html">查看完整图库 →</a>
+      </div>
+
+      <div class="card">
+        <h3>灰度传感器（IIC 通信 · 12 位分辨率）</h3>
+        <div class="time">独立设计　｜　十路灰度检测阵列</div>
+        <p>基于光电对管的十路灰度检测阵列，将路面反射光强转化为电压信号，实现赛道灰度多路同步检测。单片机 ADC 结合 DMA 机制高速采样转运，采样过程不占用 CPU，显著降低主控负载；通过 IIC 协议与主机通信，相比模拟量直传抗干扰能力更强、布线更简洁，为整车循迹控制提供低延迟、高精度的偏差数据。</p>
+        <div class="imgs">
+          <img src="images/p16_1.jpg" alt="灰度传感器 3D 图">
+          <img src="images/p17_2.jpg" alt="灰度传感器实物">
+        </div>
+        <div class="tags"><span>光电对管</span><span>ADC + DMA</span><span>IIC 通信</span><span>12 位分辨率</span></div>
+      </div>
+
+      <div class="card">
+        <h3>航模电池低压预警模块</h3>
+        <div class="time">独立设计　｜　纯硬件方案 · 无需 MCU</div>
+        <p>使用运放 LM358 构建电压比较器，对电池分压信号实时监测；可调电阻设定预警阈值，适配不同规格航模电池。电压低于阈值时触发三极管饱和导通，驱动 LED 与蜂鸣器声光报警；针对电磁式蜂鸣器的感性特征，并联续流二极管吸收关断时的感生电动势，保护三极管不被击穿。响应快、成本低、可靠性高。</p>
+        <div class="imgs">
+          <img src="images/p18_1.jpg" alt="低压预警模块原理图">
+          <img src="images/p18_2.jpg" alt="低压预警模块 3D 图">
+        </div>
+        <div class="tags"><span>LM358</span><span>电压比较器</span><span>续流二极管</span><span>声光报警</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 03 PCB设计作品 ============ -->
+  <section class="sec" id="sec3">
+    <h2 class="sec-title">03　PCB 设计作品</h2>
+    <div class="sec-sub">蓝桥杯主驱一体板　｜　实习作品</div>
+    <div class="cards">
+
+      <div class="card">
+        <h3>蓝桥杯主驱一体板</h3>
+        <div class="time">独立设计　｜　主控 + 电机驱动一体化 PCB</div>
+        <p>将主控最小系统与电机驱动集成于同一块板卡，完成原理图设计与 PCB 布局布线：电源入口防反接与滤波、功率回路短而宽、控制信号与功率地分开走线，接口按功能分区靠板边布置，兼顾布线效率与装配便利性。</p>
+        <div class="imgs">
+          <img src="images/p20_1.jpg" alt="蓝桥杯主驱一体板布线图">
+          <img src="images/p20_2.jpg" alt="蓝桥杯主驱一体板">
+        </div>
+        <div class="tags"><span>主驱一体</span><span>布局布线</span><span>电源完整性</span></div>
+      </div>
+
+      <div class="card">
+        <h3>实习作品</h3>
+        <div class="time">企业实习　｜　核心板布线与 BGA 扇出实践</div>
+        <p>实习期间完成的 PCB 设计练习：核心板布线（Type-C 供电 / 下载、电源指示、排针接口分区布置），以及 BGA 封装的扇出与等长走线练习，熟悉多层板叠层规划、差分对与蛇形等长的布线要点。</p>
+        <div class="imgs">
+          <img src="images/p21_2.jpg" alt="实习作品：核心板布线">
+          <img src="images/p22_1.jpg" alt="实习作品：BGA 扇出与等长走线">
+        </div>
+        <div class="tags"><span>多层板</span><span>BGA 扇出</span><span>等长走线</span><span>差分对</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 04 复刻开源作品 ============ -->
+  <section class="sec" id="sec4">
+    <h2 class="sec-title">04　复刻开源作品</h2>
+    <div class="sec-sub">STM32F1 无人机飞控　｜　STM32F405 核心板　｜　NFC 卡片　｜　桌面机器狗</div>
+    <div class="cards">
+
+      <div class="card">
+        <h3>STM32F1 无人机飞控</h3>
+        <div class="time">复刻开源方案　｜　独立打板焊接与测试</div>
+        <p>基于 STM32F103 的四轴飞行器主控板，复刻开源方案并独立完成打板、焊接与测试。单板集成 STM32 最小系统、USB 转 TTL 调试电路、Type-C 接口、MPU6050 六轴姿态传感器与四路 MOS 电机驱动，覆盖飞控所需的全部核心功能。</p>
+        <div class="imgs">
+          <img src="images/p24_1.jpg" alt="F1 飞控原理图">
+          <img src="images/p24_2.jpg" alt="F1 飞控实物">
+        </div>
+        <div class="tags"><span>STM32F103</span><span>MPU6050</span><span>MOS 驱动</span><span>SBUS 通信</span></div>
+        <a class="glink" href="hw-f1-fc.html">查看完整图库 →</a>
+      </div>
+
+      <div class="card">
+        <h3>STM32F405 核心板</h3>
+        <div class="time">双层板　｜　立创 EDA　｜　原理图 → PCB → 打板 → 焊接 → 调试</div>
+        <p>基于 STM32F405（168MHz Cortex-M4F）的核心控制板，用于高主频 MCU 最小系统设计实践。覆盖 DCDC 降压、电源去耦、晶振、复位、BOOT 配置、SWD 调试接口、USB 转串口与 TF 卡等关键环节，完成原理图、PCB 与焊接调试全流程。</p>
+        <div class="imgs">
+          <img src="images/p25_1.jpg" alt="F405 核心板原理图">
+          <img src="images/p25_2.jpg" alt="F405 核心板实物">
+        </div>
+        <div class="tags"><span>STM32F405</span><span>Cortex-M4F</span><span>最小系统</span><span>DCDC 降压</span></div>
+        <a class="glink" href="hw-f405.html">查看完整图库 →</a>
+      </div>
+
+      <div class="card">
+        <h3>NFC 卡片</h3>
+        <div class="time">独立设计　｜　PCB 线圈天线</div>
+        <p>使用复旦微电子 CUID 芯片，在 PCB 上设计矩形螺旋线圈天线，基于 13.56MHz 频段的近场电磁感应原理实现与 NFC 读写器的互感通信。完成线圈参数设计与实测调试，刷卡识别稳定，可作为名片 / 门禁卡等场景使用；通过该实践掌握了射频近场耦合的基本原理与 PCB 天线设计要点。</p>
+        <div class="imgs">
+          <img src="images/p26_1.jpg" alt="NFC 卡片线圈设计">
+          <img src="images/p26_2.jpg" alt="NFC 卡片正反面">
+        </div>
+        <div class="tags"><span>CUID 芯片</span><span>13.56MHz</span><span>PCB 天线</span><span>近场耦合</span></div>
+      </div>
+
+      <div class="card">
+        <h3>桌面机器狗</h3>
+        <div class="time">复刻开源项目　｜　整机组装与调试</div>
+        <p>复刻开源桌面机器狗项目，采用 ESP8266 作为主控，单板集成电压采集、OLED 屏幕接口、舵机接口、电源降压模块与扩展接口。独立完成结构组装、舵机接线与运动控制调试，实现步态行走与动作控制，熟悉多舵机协同控制与电池供电系统的整机组装调试流程。</p>
+        <div class="imgs">
+          <img src="images/p27_1.jpg" alt="桌面机器狗原理图">
+          <img src="images/p27_3.jpg" alt="桌面机器狗实物">
+        </div>
+        <div class="tags"><span>ESP8266</span><span>多舵机协同</span><span>步态控制</span><span>整机调试</span></div>
+      </div>
+
+      <a class="card" href="hardware.html">
+        <h3>硬件设计作品图库</h3>
+        <div class="time">STM32F1 飞控主板　｜　STM32F405 核心板　｜　DRV8701E 驱动板　｜　智能车人工智能组主板</div>
+        <p>每个工程的完整原理图与 PCB 各层视图，配图注说明。</p>
+        <span class="link">进入图库 →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ 05 奖项与证书 ============ -->
+  <section class="sec" id="sec5">
+    <h2 class="sec-title">05　奖项与证书</h2>
+    <div class="sec-sub">竞赛获奖　｜　证书</div>
+    <div class="awards">
+      <ul>
+        <li>全国大学生智能汽车竞赛 · 室外赛　全国一等奖</li>
+        <li>全国大学生智能汽车竞赛 · 完全模型组　全国二等奖</li>
+        <li>全国大学生机械创新设计大赛　全国二等奖</li>
+        <li>全球校园人工智能算法精英赛　全国二等奖</li>
+        <li>中国机器人及人工智能大赛　全国三等奖</li>
+        <li>第十九届先进机器人及仿真技术大赛　全国三等奖</li>
+        <li>“建行杯”辽宁省大学生创新大赛　银奖</li>
+        <li>中国电子学会 PCB Layout 中级工程师专业技术证书</li>
+        <li>大学英语六级证书（CET-6）</li>
+      </ul>
+    </div>
+  </section>
+
 </div>
+
+<footer>© 2026 刘树澎 · 本页面由 GitHub Pages 托管</footer>
 
 </body>
 </html>
