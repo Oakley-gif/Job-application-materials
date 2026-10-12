@@ -56,8 +56,10 @@ footer{text-align:center;color:#999;font-size:12.5px;padding:24px 0 36px;}
     <div class="time">独立设计　｜　已实际用于两个竞赛项目</div>
     <p>电源输入采用 PMOS 防反接；针对控制信号易受功率级干扰的问题，在信号输入端增加缓冲器进行隔离整形，防止功率级开关噪声回灌主控。以 DRV8701E 栅极驱动芯片配合外部 MOS 管搭建 H 桥（桥臂选用 TPH1R403），驱动能力可按电机需求灵活选配 MOS；MOS 管对称排布、功率回路短而宽，功率地与信号地分开走线。完成器件选型、原理图、PCB、打板、焊接与上电测试全流程，长时运行稳定无故障。</p>
     <div class="imgs">
+      <img src="images/p14_1.jpg" alt="DRV8701E 驱动板布线图">
       <img src="images/p14_2.jpg" alt="DRV8701E 驱动板 3D 图">
       <img src="images/p15_1.jpg" alt="DRV8701E 驱动板实物">
+      <img src="images/p15_2.jpg" alt="DRV8701E 驱动板">
     </div>
     <div class="tags"><span>DRV8701E</span><span>H 桥</span><span>TPH1R403</span><span>信号隔离</span><span>功率布局</span></div>
     <a class="glink" href="hw-drv8701.html">查看完整图库 →</a>
@@ -69,7 +71,9 @@ footer{text-align:center;color:#999;font-size:12.5px;padding:24px 0 36px;}
     <p>基于光电对管的十路灰度检测阵列，将路面反射光强转化为电压信号，实现赛道灰度多路同步检测。单片机 ADC 结合 DMA 机制高速采样转运，采样过程不占用 CPU，显著降低主控负载；通过 IIC 协议与主机通信，相比模拟量直传抗干扰能力更强、布线更简洁，为整车循迹控制提供低延迟、高精度的偏差数据。</p>
     <div class="imgs">
       <img src="images/p16_1.jpg" alt="灰度传感器 3D 图">
-      <img src="images/p17_2.jpg" alt="灰度传感器实物">
+      <img src="images/p16_2.jpg" alt="灰度传感器实物">
+      <img src="images/p17_1.jpg" alt="灰度传感器">
+      <img src="images/p17_2.jpg" alt="灰度传感器布线图">
     </div>
     <div class="tags"><span>光电对管</span><span>ADC + DMA</span><span>IIC 通信</span><span>12 位分辨率</span></div>
   </div>
@@ -81,6 +85,7 @@ footer{text-align:center;color:#999;font-size:12.5px;padding:24px 0 36px;}
     <div class="imgs">
       <img src="images/p18_1.jpg" alt="低压预警模块原理图">
       <img src="images/p18_2.jpg" alt="低压预警模块 3D 图">
+      <img src="images/p18_3.jpg" alt="低压预警模块实物">
     </div>
     <div class="tags"><span>LM358</span><span>电压比较器</span><span>续流二极管</span><span>声光报警</span></div>
   </div>
