@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>01 竞赛项目 · 刘树澎</title>
+<style>
+:root{--ink:#1f3a5f;--accent:#2f6dbd;--gray:#666;--line:#e3e8ef;--bg:#f4f6f9;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#2b2b2b;background:var(--bg);line-height:1.7;}
+.topbar{background:linear-gradient(135deg,#1f3a5f 0%,#2f6dbd 100%);color:#fff;padding:36px 24px 30px;}
+.topbar .inner{max-width:960px;margin:0 auto;}
+.back{display:inline-block;color:#fff;font-size:13.5px;text-decoration:none;opacity:.85;margin-bottom:12px;}
+.back:hover{opacity:1;text-decoration:underline;}
+.topbar h1{font-size:26px;letter-spacing:1px;}
+.topbar .sub{font-size:13.5px;margin-top:6px;opacity:.8;}
+.wrap{max-width:960px;margin:0 auto;padding:36px 24px 64px;}
+a.card,div.card{background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(31,58,95,.08);display:block;padding:24px 28px;margin-bottom:20px;text-decoration:none;color:inherit;border:1px solid transparent;transition:transform .15s,box-shadow .15s,border-color .15s;}
+a.card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(31,58,95,.14);border-color:var(--accent);}
+.card .award{display:inline-block;font-size:12.5px;color:#fff;background:var(--accent);border-radius:4px;padding:2px 10px;margin-bottom:10px;}
+.card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+.card .time{font-size:12.5px;color:var(--gray);margin-bottom:10px;}
+.card p{font-size:14px;color:#444;}
+.tags{margin:14px 0 12px;}
+.tags span{display:inline-block;font-size:12px;color:var(--ink);background:#eef3fa;border-radius:4px;padding:2px 9px;margin:0 6px 6px 0;}
+.card .link{font-size:14.5px;font-weight:700;color:var(--accent);}
+footer{text-align:center;color:var(--gray);font-size:12.5px;padding:28px 0 40px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="inner">
+    <a class="back" href="index.html">← 返回首页</a>
+    <h1>01　竞赛项目</h1>
+    <div class="sub">智能汽车竞赛 · 完全模型组　｜　机械创新设计大赛　｜　两轮平衡循迹小车</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <a class="card" href="chive-machine.html">
+    <span class="award">全国二等奖 · 全国大学生机械创新设计大赛</span>
+    <h3>“韭韭归一”——基于仿生视觉的智能韭菜处理机</h3>
+    <div class="time">2025.07 – 2026.04　｜　硬件与电控负责人</div>
+    <p>面向大型商超生鲜加工区的韭菜采后处理一体机，在单一平台实现“振动给料—气动去土—视觉除黄叶—电控捆扎—定量码垛”五位一体全流程自动化。以 ESP32-S3 双核为主控搭建“决策—桥梁—感知—执行”四层电控架构，FreeRTOS 多任务调度，经 I2C 扩展 PCA9685 输出 16 路 PWM，单板协同驱动直流 / 步进 / 伺服电机、舵机、电缸、电磁阀 6 类执行器；OpenMV 视觉引导仿生夹爪剔除黄叶，MQTT 接入云平台实现网页远程控制。</p>
+    <div class="tags">
+      <span>ESP32-S3</span><span>FreeRTOS</span><span>PCA9685</span><span>OpenMV 视觉</span><span>MQTT</span><span>运动控制</span><span>电源管理</span><span>机电一体化</span>
+    </div>
+    <span class="link">阅读完整技术报告 →</span>
+  </a>
+
+  <a class="card" href="smartcar-vision.html">
+    <span class="award">全国二等奖 · 全国大学生智能汽车竞赛 · 完全模型组</span>
+    <h3>智能车完全模型组</h3>
+    <div class="time">2025.01 – 2025.07　｜　5 人团队 · 队内唯一硬件队员</div>
+    <p>“智慧生活”主题无人驾驶竞速：EdgeBoard + TC264 双处理器架构，独立完成 3 块自制电路板（TC264 主板、DRV8701E 驱动与 USB 通信板、照明灯板）与整车机械结构设计。12V 电池输入经 TPS5430 降压得到 5V / 6.8V / 3.3V 三路电源，Buck + LDO 组合抑制模块间串扰，EdgeBoard 供电链路串入 ACM7060F 共模滤波器抑制 EMI；设计单路 USB 转双路 TTL 串口方案提升通信可靠性；融合神经网络目标检测与传统视觉循迹完成全任务场景。</p>
+    <div class="tags">
+      <span>TC264</span><span>DRV8701E</span><span>TPS5430</span><span>电源管理</span><span>EMI 抑制</span><span>OpenCV</span><span>目标检测</span><span>3D 打印</span>
+    </div>
+    <span class="link">阅读完整技术报告 →</span>
+  </a>
+
+  <a class="card" href="balance-car.html">
+    <span class="award">全国大学生智能汽车竞赛 · 电磁组</span>
+    <h3>基于电磁感应的两轮平衡循迹小车</h3>
+    <div class="time">2024.09 – 2024.11　｜　3 人团队 · 核心成员</div>
+    <p>基于 STC32G12K128 的两轮自平衡循迹车：独立完成 DRV8701E 直流电机驱动板的原理图、PCB、打板、焊接与测试全流程；主导电磁感应信号链路设计（运放放大 + 12 位 ADC 采集 + 中值滤波）；互补滤波姿态解算 + “平衡—速度—转向”串级 PID，五电感差比和差加权循迹算法，经 100+ 次实测调参实现标准赛道 10 圈连续稳定循迹，正式比赛全程无故障完赛。</p>
+    <div class="tags">
+      <span>STC32</span><span>DRV8701E</span><span>串级 PID</span><span>互补滤波</span><span>电磁循迹</span><span>ADC 信号链</span>
+    </div>
+    <span class="link">阅读完整技术报告 →</span>
+  </a>
+
+</div>
+
+<footer>© 2026 刘树澎 · 本页面由 GitHub Pages 托管</footer>
+
+</body>
+</html>

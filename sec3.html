@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 PCB 设计作品 · 刘树澎</title>
+<style>
+:root{--ink:#1f3a5f;--accent:#2f6dbd;--gray:#666;--line:#e3e8ef;--bg:#f4f6f9;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#2b2b2b;background:var(--bg);line-height:1.7;}
+.topbar{background:linear-gradient(135deg,#1f3a5f 0%,#2f6dbd 100%);color:#fff;padding:36px 24px 30px;}
+.topbar .inner{max-width:960px;margin:0 auto;}
+.back{display:inline-block;color:#fff;font-size:13.5px;text-decoration:none;opacity:.85;margin-bottom:12px;}
+.back:hover{opacity:1;text-decoration:underline;}
+.topbar h1{font-size:26px;letter-spacing:1px;}
+.topbar .sub{font-size:13.5px;margin-top:6px;opacity:.8;}
+.wrap{max-width:960px;margin:0 auto;padding:36px 24px 64px;}
+div.card{background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(31,58,95,.08);padding:24px 28px;margin-bottom:20px;border:1px solid transparent;}
+.card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+.card .time{font-size:12.5px;color:var(--gray);margin-bottom:10px;}
+.card p{font-size:14px;color:#444;}
+.imgs{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 4px;}
+.imgs img{flex:1 1 0;min-width:0;max-height:250px;object-fit:contain;background:#fafbfd;border:1px solid var(--line);border-radius:8px;padding:4px;}
+.tags{margin:14px 0 2px;}
+.tags span{display:inline-block;font-size:12px;color:var(--ink);background:#eef3fa;border-radius:4px;padding:2px 9px;margin:0 6px 6px 0;}
+footer{text-align:center;color:var(--gray);font-size:12.5px;padding:28px 0 40px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="inner">
+    <a class="back" href="index.html">← 返回首页</a>
+    <h1>03　PCB 设计作品</h1>
+    <div class="sub">蓝桥杯主驱一体板　｜　实习作品</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h3>蓝桥杯主驱一体板</h3>
+    <div class="time">独立设计　｜　主控 + 电机驱动一体化 PCB</div>
+    <p>将主控最小系统与电机驱动集成于同一块板卡，完成原理图设计与 PCB 布局布线：电源入口防反接与滤波、功率回路短而宽、控制信号与功率地分开走线，接口按功能分区靠板边布置，兼顾布线效率与装配便利性。</p>
+    <div class="imgs">
+      <img src="images/p20_1.jpg" alt="蓝桥杯主驱一体板布线图">
+      <img src="images/p20_2.jpg" alt="蓝桥杯主驱一体板">
+    </div>
+    <div class="tags"><span>主驱一体</span><span>布局布线</span><span>电源完整性</span></div>
+  </div>
+
+  <div class="card">
+    <h3>实习作品</h3>
+    <div class="time">企业实习　｜　核心板布线与 BGA 扇出实践</div>
+    <p>实习期间完成的 PCB 设计练习：核心板布线（Type-C 供电 / 下载、电源指示、排针接口分区布置），以及 BGA 封装的扇出与等长走线练习，熟悉多层板叠层规划、差分对与蛇形等长的布线要点。</p>
+    <div class="imgs">
+      <img src="images/p21_2.jpg" alt="实习作品：核心板布线">
+      <img src="images/p22_1.jpg" alt="实习作品：BGA 扇出与等长走线">
+    </div>
+    <div class="tags"><span>多层板</span><span>BGA 扇出</span><span>等长走线</span><span>差分对</span></div>
+  </div>
+
+</div>
+
+<footer>© 2026 刘树澎 · 本页面由 GitHub Pages 托管</footer>
+
+</body>
+</html>

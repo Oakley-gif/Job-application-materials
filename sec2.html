@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02 电路设计作品 · 刘树澎</title>
+<style>
+:root{--ink:#1f3a5f;--accent:#2f6dbd;--gray:#666;--line:#e3e8ef;--bg:#f4f6f9;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#2b2b2b;background:var(--bg);line-height:1.7;}
+.topbar{background:linear-gradient(135deg,#1f3a5f 0%,#2f6dbd 100%);color:#fff;padding:36px 24px 30px;}
+.topbar .inner{max-width:960px;margin:0 auto;}
+.back{display:inline-block;color:#fff;font-size:13.5px;text-decoration:none;opacity:.85;margin-bottom:12px;}
+.back:hover{opacity:1;text-decoration:underline;}
+.topbar h1{font-size:26px;letter-spacing:1px;}
+.topbar .sub{font-size:13.5px;margin-top:6px;opacity:.8;}
+.wrap{max-width:960px;margin:0 auto;padding:36px 24px 64px;}
+div.card{background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(31,58,95,.08);padding:24px 28px;margin-bottom:20px;border:1px solid transparent;}
+.card h3{font-size:19px;color:var(--ink);margin-bottom:8px;}
+.card .time{font-size:12.5px;color:var(--gray);margin-bottom:10px;}
+.card p{font-size:14px;color:#444;}
+.imgs{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 4px;}
+.imgs img{flex:1 1 0;min-width:0;max-height:230px;object-fit:contain;background:#fafbfd;border:1px solid var(--line);border-radius:8px;padding:4px;}
+.tags{margin:14px 0 2px;}
+.tags span{display:inline-block;font-size:12px;color:var(--ink);background:#eef3fa;border-radius:4px;padding:2px 9px;margin:0 6px 6px 0;}
+a.glink{display:inline-block;font-size:13.5px;font-weight:700;color:var(--accent);margin-top:10px;text-decoration:none;}
+a.glink:hover{text-decoration:underline;}
+footer{text-align:center;color:var(--gray);font-size:12.5px;padding:28px 0 40px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="inner">
+    <a class="back" href="index.html">← 返回首页</a>
+    <h1>02　电路设计作品</h1>
+    <div class="sub">TPS5430 Buck 电源　｜　DRV8701E 电机驱动板　｜　灰度传感器　｜　航模低压预警电路</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h3>基于 TPS5430 的 Buck 直流电源降压模块</h3>
+    <div class="time">独立设计　｜　原理图 · PCB · 焊接 · 示波器实测</div>
+    <p>输入级采用 PMOS 防反接保护，以 TPS5430 为核心配合功率电感、续流肖特基二极管与输出电容构成完整 Buck 降压拓扑。使用示波器实测输出纹波与负载动态响应，观察开关节点振铃并定位干扰来源；通过开关节点增加 RC 吸收电路、反馈补偿网络引入前馈电容、缩小开关电流环路面积并保持地平面完整等措施，降低辐射与传导干扰，提升电源输出质量。</p>
+    <div class="imgs">
+      <img src="images/p13_1.jpg" alt="TPS5430 Buck 原理图">
+      <img src="images/p13_2.jpg" alt="Buck 电源模块">
+    </div>
+    <div class="tags"><span>TPS5430</span><span>Buck 拓扑</span><span>PMOS 防反接</span><span>RC 吸收</span><span>纹波实测</span></div>
+  </div>
+
+  <div class="card">
+    <h3>基于 DRV8701E 的直流有刷电机驱动板</h3>
+    <div class="time">独立设计　｜　已实际用于两个竞赛项目</div>
+    <p>电源输入采用 PMOS 防反接；针对控制信号易受功率级干扰的问题，在信号输入端增加缓冲器进行隔离整形，防止功率级开关噪声回灌主控。以 DRV8701E 栅极驱动芯片配合外部 MOS 管搭建 H 桥（桥臂选用 TPH1R403），驱动能力可按电机需求灵活选配 MOS；MOS 管对称排布、功率回路短而宽，功率地与信号地分开走线。完成器件选型、原理图、PCB、打板、焊接与上电测试全流程，长时运行稳定无故障。</p>
+    <div class="imgs">
+      <img src="images/p14_2.jpg" alt="DRV8701E 驱动板 3D 图">
+      <img src="images/p15_1.jpg" alt="DRV8701E 驱动板实物">
+    </div>
+    <div class="tags"><span>DRV8701E</span><span>H 桥</span><span>TPH1R403</span><span>信号隔离</span><span>功率布局</span></div>
+    <a class="glink" href="hw-drv8701.html">查看完整图库 →</a>
+  </div>
+
+  <div class="card">
+    <h3>灰度传感器（IIC 通信 · 12 位分辨率）</h3>
+    <div class="time">独立设计　｜　十路灰度检测阵列</div>
+    <p>基于光电对管的十路灰度检测阵列，将路面反射光强转化为电压信号，实现赛道灰度多路同步检测。单片机 ADC 结合 DMA 机制高速采样转运，采样过程不占用 CPU，显著降低主控负载；通过 IIC 协议与主机通信，相比模拟量直传抗干扰能力更强、布线更简洁，为整车循迹控制提供低延迟、高精度的偏差数据。</p>
+    <div class="imgs">
+      <img src="images/p16_1.jpg" alt="灰度传感器 3D 图">
+      <img src="images/p17_2.jpg" alt="灰度传感器实物">
+    </div>
+    <div class="tags"><span>光电对管</span><span>ADC + DMA</span><span>IIC 通信</span><span>12 位分辨率</span></div>
+  </div>
+
+  <div class="card">
+    <h3>航模电池低压预警模块</h3>
+    <div class="time">独立设计　｜　纯硬件方案 · 无需 MCU</div>
+    <p>使用运放 LM358 构建电压比较器，对电池分压信号实时监测；可调电阻设定预警阈值，适配不同规格航模电池。电压低于阈值时触发三极管饱和导通，驱动 LED 与蜂鸣器声光报警；针对电磁式蜂鸣器的感性特征，并联续流二极管吸收关断时的感生电动势，保护三极管不被击穿。响应快、成本低、可靠性高。</p>
+    <div class="imgs">
+      <img src="images/p18_1.jpg" alt="低压预警模块原理图">
+      <img src="images/p18_2.jpg" alt="低压预警模块 3D 图">
+    </div>
+    <div class="tags"><span>LM358</span><span>电压比较器</span><span>续流二极管</span><span>声光报警</span></div>
+  </div>
+
+</div>
+
+<footer>© 2026 刘树澎 · 本页面由 GitHub Pages 托管</footer>
+
+</body>
+</html>
